@@ -4,32 +4,63 @@
 {% block content %}
 <h1>Create an Account</h1>
 
-<form action="{{ url_for('auth.register_submit') }}" method="post" novalidate>
-  <div class="field">
-    <label for="username">Username</label>
-    <input id="username" name="username" required>
-  </div>
+{{ url_for('auth.register_submit') }}
 
-  <div class="field">
-    <label for="email">Email (optional)</label>
-    <input id="email" name="email" type="email">
-  </div>
+    <div class="field">
+        <label for="username">Username</label>
+        <input
+            id="username"
+            name="username"
+            type="text"
+            required
+            autocomplete="username">
+    </div>
 
-  <div class="field">
-    <label for="password">Password</label>
-    <input id="password" name="password" type="password" minlength="6" required>
-  </div>
+    <div class="field">
+        <label for="email">Email</label>
+        <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            autocomplete="email">
+    </div>
 
-  <div class="field">
-    <label for="confirm">Confirm Password</label>
-    <input id="confirm" name="confirm" type="password" minlength="6" required>
-  </div>
+    <div class="field">
+        <label for="password">Password</label>
+        <input
+            id="password"
+            name="password"
+            type="password"
+            minlength="12"
+            required
+            autocomplete="new-password">
 
-  <button class="btn" type="submit">Register</button>
+        <small class="help-text">
+            Password must be at least 12 characters long and contain:
+            an uppercase letter, lowercase letter, number and special character.
+        </small>
+    </div>
+
+    <div class="field">
+        <label for="confirm">Confirm Password</label>
+        <input
+            id="confirm"
+            name="confirm"
+            type="password"
+            minlength="12"
+            required
+            autocomplete="new-password">
+    </div>
+
+    <button class="btn" type="submit">
+        Register
+    </button>
+
 </form>
 
 <p class="mt-3">
-  Already have an account?
-  <a href="{{ url_for('auth.login_form') }}">Sign in</a>
+    Already have an account?
+     }}">Sign in</a>
 </p>
 {% endblock %}
