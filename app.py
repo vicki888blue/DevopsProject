@@ -6,11 +6,11 @@ from tickets.routes import tickets_bp
 from db import init_engine
 
 def create_app():
-    # If your templates (.html) are in the project root on PA:
+    
     app = Flask(__name__, template_folder='.')
     app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'change-me')
 
-    # Absolute DB path on PythonAnywhere; local fallback when run on your PC
+
     db_url = os.getenv('DATABASE_URL', 'sqlite:////home/vicki888blue/mydatabase.db')
     if not os.path.exists('/home/vicki888blue/mydatabase.db'):
         db_url = 'sqlite:///mydatabase.db'

@@ -73,7 +73,7 @@ def edit_form(ticket):
         return ("Not found", 404)
     return render_template("tickets_edit.html", row=row, user=get_current_user())
 
-# UPDATE: POST /tickets/<ticket>/edit  (Admin + Agent)
+# UPDATE: POST /tickets/<ticket>/edi  (Admin + Agent)
 @tickets_bp.post("/<ticket>/edit")
 @login_required
 @role_required(ROLE_ADMIN, ROLE_AGENT)

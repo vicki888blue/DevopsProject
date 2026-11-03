@@ -64,7 +64,7 @@ def register_submit():
     password = request.form.get("password") or ""
     confirm = request.form.get("confirm") or ""
 
-    # Basic validations
+    # Basic validation
     if not username:
         flash("Username is required.", "error")
         return redirect(url_for("auth.register_form"))

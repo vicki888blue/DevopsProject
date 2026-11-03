@@ -10,7 +10,7 @@ class Config:
     PA_DB_PATH = f"/home/{PA_USERNAME}/mydatabase.db"
 
     # Choose DB in this order:
-    # 1) DATABASE_URL env var (if you set one in Web → Environment variables)
+    # 1) DATABASE_URL env var (if you set one in Web → Environment variables
     # 2) Absolute path on PythonAnywhere (if the file exists)
     # 3) Local file next to config.py
     if os.getenv("DATABASE_URL"):

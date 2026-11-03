@@ -34,12 +34,7 @@ def role_required(*allowed_role_ids):
                 # Preferred: return a proper 403
                 abort(403)
 
-                # If you prefer a redirect instead, comment the line above and use:
-                # flash("You do not have permission to do that.", "error")
-                # try:
-                #     return redirect(url_for("tickets.list"))
-                # except Exception:
-                #     return redirect(url_for("auth.login_form"))
+              
 
             return view(*args, **kwargs)
         return wrapped

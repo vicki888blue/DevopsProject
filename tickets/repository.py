@@ -47,7 +47,7 @@ def exists_ticket(ticket_id: str) -> bool:
         return conn.execute(sql, {"t": ticket_id}).first() is not None
 
 
-# -------- Write operations --------
+
 
 def create_ticket(data: Dict[str, Any]) -> None:
     """

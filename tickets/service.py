@@ -111,7 +111,6 @@ def validate_update(form, username: str):
     data["UpdatedBy"] = username
     data["UpdatedAt"] = datetime.utcnow().isoformat(timespec="seconds")
 
-    # must have at least one non-audit change
     non_audit = {k: v for k, v in data.items() if k not in {"UpdatedBy", "UpdatedAt"}}
     if not non_audit:
         errors.append("No fields provided to update.")
