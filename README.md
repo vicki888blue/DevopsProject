@@ -79,7 +79,7 @@ Show more lines
 Visit:
 http://127.0.0.1:5000/
 
-Unit Testing
+Unit Testing *
 This project includes unittest-based tests in the tests/ directory.
 Covered in the test suite:
 •	Login page loads
